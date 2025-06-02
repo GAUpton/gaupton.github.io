@@ -29,3 +29,8 @@ defaults:
       layout: post
       author: George Alfred Upton
       language: English # A language of the resource.
+
+# Collections
+
+collections:
+  - branding
