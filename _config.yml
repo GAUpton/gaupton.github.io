@@ -34,3 +34,4 @@ defaults:
 
 collections:
   - branding
+  - editing

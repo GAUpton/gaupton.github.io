@@ -1,0 +1,10 @@
+---
+layout: page
+---
+{% for project in site.editing %}
+<section>
+    <h2>{{ project.role }}, {{ project.magazine }}</h2>
+    {% if project.start_date %}<p>{{ project.start_date }}—{{ project.end_date }}</p>{% endif %}
+    {{ project.content | markdownify }}
+</section>
+{% endfor %}
