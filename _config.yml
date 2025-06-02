@@ -1,0 +1,31 @@
+title: George Alfred Upton`
+description:
+url: https://georgealfredupton.com
+author:
+    name: George Alfred Upton
+    email:
+    instagram: gaupton
+social:
+  name: George Alfred Upton
+  links:
+    - https://www.instagram.com/gaupton
+lang: en_GB
+permalink: ":title:output_ext"
+markdown: kramdown
+
+kramdown:
+  smart_quotes: ["apos", "apos", "quot", "quot"]
+
+plugins:
+- jekyll-seo-tag
+- jekyll-sitemap
+
+# Default Post Front Matter
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: post
+      author: George Alfred Upton
+      language: English # A language of the resource.
