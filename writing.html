@@ -2,18 +2,23 @@
 layout: page
 ---
 
-<ul>
-  {% for article in site.writing %}
-  <li>
-    <section>
-      <h2>
-        <span class="column article-title">{{ article.title }}</span
-        ><span class="column article-publication"
-          >{{ article.publication }}</span
-        ><span class="column article-year">{{ article.year }}</span>
-      </h2>
-      {{ article.content | markdownify }}
-    </section>
-  </li>
-  {% endfor %}
-</ul>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Publication</th>
+      <th>Year</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for project in site.writing %}
+    <tr>
+      <td>{{ project.title }}</td>
+      <td>{{ project.publication }}</td>
+      <td>{{ project.year }}</td>
+      <td><a title="{{ project.title }}" href="{{ project.url }}">Link</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
