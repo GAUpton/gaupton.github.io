@@ -2,9 +2,9 @@ title: George Alfred Upton
 description:
 url: https://georgealfredupton.com
 author:
-    name: George Alfred Upton
-    email:
-    instagram: gaupton
+  name: George Alfred Upton
+  email:
+  instagram: gaupton
 social:
   name: George Alfred Upton
   links:
@@ -17,13 +17,12 @@ kramdown:
   smart_quotes: ["apos", "apos", "quot", "quot"]
 
 plugins:
-- jekyll-seo-tag
-- jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Default Post Front Matter
 defaults:
-  -
-    scope:
+  - scope:
       path: "" # an empty string here means all files in the project
     values:
       layout: post
@@ -33,5 +32,6 @@ defaults:
 # Collections
 
 collections:
-  - branding
+  - commercial
   - editing
+  - writing
