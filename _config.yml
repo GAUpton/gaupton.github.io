@@ -10,7 +10,7 @@ social:
   links:
     - https://www.instagram.com/gaupton
 lang: en_GB
-permalink: ":title:output_ext"
+permalink: "/:title/"
 markdown: kramdown
 
 kramdown:
@@ -32,6 +32,8 @@ defaults:
 # Collections
 
 collections:
-  - commercial
+  commercial:
+    output: true
+    permalink: /:collection/:name
   - editing
   - writing
