@@ -1,6 +1,9 @@
 ---
 title: "Sekford Journal"
+brand: "Sekford"
+year:
 ---
+
 I developed and edited the Sekford Journal, a newsletter that offered monthly insights into the people, ideas and places that shaped London-based watch brand [Sekford](https://www.instagram.com/sekford/).
 
 - Margot Henderson
