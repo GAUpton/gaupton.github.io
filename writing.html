@@ -1,0 +1,19 @@
+---
+layout: page
+---
+
+<ul>
+  {% for article in site.writing %}
+  <li>
+    <section>
+      <h2>
+        <span class="column article-title">{{ article.title }}</span
+        ><span class="column article-publication"
+          >{{ article.publication }}</span
+        ><span class="column article-year">{{ article.year }}</span>
+      </h2>
+      {{ article.content | markdownify }}
+    </section>
+  </li>
+  {% endfor %}
+</ul>
