@@ -1,10 +1,18 @@
 ---
 layout: page
 ---
-{% for project in site.editing %}
-<section>
-    <h2>{{ project.role }}, {{ project.magazine }}</h2>
-    {% if project.start_date %}<p>{{ project.start_date }}—{{ project.end_date }}</p>{% endif %}
-    {{ project.content | markdownify }}
-</section>
-{% endfor %}
+
+<ul>
+  {% for project in site.editing %}
+  <li>
+    <section>
+      <span class="column project-publication">{{ project.magazine }}</span>
+      <span class="column project-role">{{ project.role }}</span>
+      <span class="column project-year">
+        {{ project.start_date }}{% if project.end_date %}—{{ project.end_date
+        }}{% endif %}
+      </span>
+    </section>
+  </li>
+  {% endfor %}
+</ul>
