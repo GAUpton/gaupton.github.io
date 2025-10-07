@@ -8,6 +8,7 @@ layout: page
       <th>Title</th>
       <th>Brand</th>
       <th>Year</th>
+      <th>Link</th>
     </tr>
   </thead>
   <tbody>
@@ -16,6 +17,7 @@ layout: page
       <td>{{ project.title }}</td>
       <td>{{ project.brand }}</td>
       <td>{{ project.year }}</td>
+      <td><a title="{{ project.title }}" href="{{ project.url }}">Link</a></td>
     </tr>
     {% endfor %}
   </tbody>
