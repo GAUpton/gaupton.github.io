@@ -35,5 +35,7 @@ collections:
   commercial:
     output: true
     permalink: /:collection/:name
-  - editing
-  - writing
+  editing:
+    output: false
+  writing:
+    output: true
