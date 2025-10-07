@@ -2,17 +2,21 @@
 layout: page
 ---
 
-<ul>
-  {% for project in site.commercial %}
-  <li>
-    <section>
-      <h2>
-        <span class="column project-title">{{ project.title }}</span
-        ><span class="column project-brand">{{ project.brand }}</span
-        ><span class="column project-year">{{ project.year }}</span>
-      </h2>
-      {{ project.content | markdownify }}
-    </section>
-  </li>
-  {% endfor %}
-</ul>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Brand</th>
+      <th>Year</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for project in site.commercial %}
+    <tr>
+      <td>{{ project.title }}</td>
+      <td>{{ project.brand }}</td>
+      <td>{{ project.year }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
