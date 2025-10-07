@@ -20,15 +20,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
-# Default Post Front Matter
-defaults:
-  - scope:
-      path: "" # an empty string here means all files in the project
-    values:
-      layout: post
-      author: George Alfred Upton
-      language: English # A language of the resource.
-
 # Collections
 
 collections:
@@ -39,3 +30,20 @@ collections:
     output: false
   writing:
     output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "commercial"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "editing"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "writing"
+    values:
+      layout: "page"
