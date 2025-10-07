@@ -2,17 +2,24 @@
 layout: page
 ---
 
-<ul>
-  {% for project in site.editing %}
-  <li>
-    <section>
-      <span class="column project-publication">{{ project.magazine }}</span>
-      <span class="column project-role">{{ project.role }}</span>
-      <span class="column project-year">
+<table>
+  <thead>
+    <tr>
+      <th>Role</th>
+      <th>Publication</th>
+      <th>Years</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for project in site.editing %}
+    <tr>
+      <td>{{ project.role }}</td>
+      <td>{{ project.publication }}</td>
+      <td>
         {{ project.start_date }}{% if project.end_date %}—{{ project.end_date
         }}{% endif %}
-      </span>
-    </section>
-  </li>
-  {% endfor %}
-</ul>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

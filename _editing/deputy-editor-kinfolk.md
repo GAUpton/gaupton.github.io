@@ -1,6 +1,6 @@
 ---
 role: Deputy Editor
-magazine: Kinfolk
+publication: Kinfolk
 start_date: 2023
 end_date:
 ---
