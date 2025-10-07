@@ -1,0 +1,18 @@
+---
+layout: page
+---
+
+<ul>
+  {% for project in site.commercial%}
+  <li>
+    <section>
+      <h2>
+        <span class="column project-title">{{ project.title }}</span
+        ><span class="column project-brand">{{ project.brand }}</span
+        ><span class="column project-year">{{ project.year }}</span>
+      </h2>
+      {{ project.content | markdownify }}
+    </section>
+  </li>
+  {% endfor %}
+</ul>
