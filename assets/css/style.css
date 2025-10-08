@@ -12,8 +12,8 @@ a {
   white-space: no-wrap;
 }
 
-header,
-nav {
+body > header,
+body > nav {
   min-height: 20vh;
   display: flex;
   justify-content: center;
@@ -21,11 +21,11 @@ nav {
   text-align: center;
 }
 
-header h1 a {
+body > header h1 a {
   text-decoration: none;
 }
 
-nav {
+body > nav {
   & ul {
     display: inline;
     list-style-type: none;
@@ -71,19 +71,14 @@ td:not(:last-child):after {
     grid-template-columns: repeat(12, 1fr);
   }
 
-  header {
+  body > header {
     grid-column: 1 / -1;
   }
 
-  main {
-    grid-column: 5 / 12;
-  }
-
-  nav {
+  body > nav {
     display: revert;
     grid-column: 2 / 4;
     text-align: revert;
-    padding: revert;
 
     & ul,
     & li,
@@ -92,6 +87,10 @@ td:not(:last-child):after {
       padding: 0;
       margin-bottom: 1em;
     }
+  }
+
+  main {
+    grid-column: 5 / 12;
   }
 
   table {
