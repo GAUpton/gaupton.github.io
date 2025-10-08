@@ -20,6 +20,7 @@ body > header,
 body > nav {
   min-height: 20vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
