@@ -1,3 +1,17 @@
+:root {
+  color-scheme: light dark;
+
+  --light-bg: white;
+  --light-color: black;
+
+  --dark-bg: black;
+  --dark-color: white;
+}
+body {
+  background-color: light-dark(var(--light-bg), var(--dark-bg));
+  color: light-dark(var(--light-color), var(--dark-color));
+}
+
 body {
   padding: 1em;
 }
@@ -13,8 +27,11 @@ table {
   font-weight: 200;
   font-style: normal;
   font-size: 1.2rem;
-  color: black;
   white-space: no-wrap;
+}
+
+a {
+  color: inherit;
 }
 
 p {
@@ -83,8 +100,12 @@ td:not(:last-child):after {
 }
 
 tbody tr:hover {
-  background: black;
-  color: white;
+  background-color: light-dark(var(--dark-bg), var(--light-bg));
+  color: light-dark(var(--dark-color), var(--light-color));
+}
+
+article h1 {
+  text-align: center;
 }
 
 @media only screen and (width >= 50em) {
@@ -132,5 +153,9 @@ tbody tr:hover {
 
   td:not(:last-child):after {
     content: revert;
+  }
+
+  article h1 {
+    text-align: revert;
   }
 }
