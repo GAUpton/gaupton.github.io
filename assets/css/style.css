@@ -1,24 +1,92 @@
-body {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-}
-header {
-  grid-column: 1 / -1;
-}
-nav {
-  grid-column: 2 / 4;
-}
-main {
-  grid-column: 4 / 11;
-}
 h1 {
   text-align: center;
+
+  & a {
+    text-decoration: none;
+  }
 }
-table {
-  border-collapse: collapse;
+
+nav {
+  margin-bottom: 1em;
+  border-bottom: solid 1px black;
+  padding-bottom: 1em;
+
+  & ul {
+    display: inline;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  & li {
+    display: inline;
+    margin-right: 1em;
+  }
+
+  & h2 {
+    display: none;
+  }
 }
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+
+thead {
+  display: none;
+}
+
+tr {
+  display: block;
+  margin-bottom: 1em;
+}
+
+td {
+  display: inline-block;
+}
+
+td:not(:last-child):after {
+  content: ",";
+}
+
+@media only screen and (width >= 50em) {
+  body {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  header {
+    grid-column: 1 / -1;
+  }
+
+  main {
+    grid-column: 5 / 11;
+  }
+
+  nav {
+    grid-column: 2 / 4;
+    border-bottom: none;
+
+    & ul,
+    & li,
+    & h2 {
+      display: revert;
+    }
+  }
+
+  table {
+    width: 100%;
+    text-align: center;
+  }
+
+  thead,
+  tr,
+  td {
+    display: revert;
+  }
+
+  td,
+  th {
+    padding-bottom: 1em;
+  }
+
+  td:not(:last-child):after {
+    content: revert;
+  }
 }
