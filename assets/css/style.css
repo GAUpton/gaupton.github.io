@@ -99,11 +99,6 @@ td:not(:last-child):after {
   content: ",";
 }
 
-tbody tr:hover {
-  background-color: light-dark(var(--dark-bg), var(--light-bg));
-  color: light-dark(var(--dark-color), var(--light-color));
-}
-
 article h1 {
   text-align: center;
 }
@@ -155,6 +150,12 @@ article h1 {
 
   td:not(:last-child):after {
     content: revert;
+  }
+
+  tbody tr:hover {
+    background-color: light-dark(var(--dark-bg), var(--light-bg));
+    color: light-dark(var(--dark-color), var(--light-color));
+    cursor: pointer;
   }
 
   article h1 {
