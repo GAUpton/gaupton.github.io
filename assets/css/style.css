@@ -1,4 +1,17 @@
-h1 {
+h1,
+h2,
+h3,
+p,
+a {
+  font-family: "EB Garamond", "Times New Roman", serif, system-ui;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1.2rem;
+  color: black;
+}
+
+header h1 {
   text-align: center;
 
   & a {
