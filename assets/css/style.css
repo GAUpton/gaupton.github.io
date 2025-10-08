@@ -14,7 +14,7 @@ a {
 
 header,
 nav {
-  height: 20vh;
+  min-height: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,7 +76,7 @@ td:not(:last-child):after {
   }
 
   main {
-    grid-column: 5 / 11;
+    grid-column: 5 / 12;
   }
 
   nav {
