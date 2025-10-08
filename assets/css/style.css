@@ -50,6 +50,8 @@ body > nav {
 table {
   width: 100%;
   text-align: center;
+  border: none;
+  border-collapse: collapse;
 }
 
 thead {
@@ -65,8 +67,19 @@ td {
   display: inline-block;
 }
 
+th,
+td {
+  padding: 0.5em;
+  border: none;
+}
+
 td:not(:last-child):after {
   content: ",";
+}
+
+tbody tr:hover {
+  background: black;
+  color: white;
 }
 
 @media only screen and (width >= 50em) {
