@@ -12,6 +12,10 @@ a {
   white-space: no-wrap;
 }
 
+p {
+  margin-block-start: 0;
+}
+
 body > header,
 body > nav {
   min-height: 20vh;
