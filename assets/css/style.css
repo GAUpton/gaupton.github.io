@@ -112,6 +112,8 @@ article h1 {
   body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    max-width: 150ch;
+    margin: 0 auto;
   }
 
   body > header {
