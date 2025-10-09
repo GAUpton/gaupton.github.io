@@ -1,14 +1,13 @@
 @font-face {
   font-family: "EB Garamond";
   font-style: normal;
-  src: url(../assets/fonts/EBGaramond-VariableFont_wght.ttf) format("ttf");
+  src: url(assets/fonts/EBGaramond-VariableFont_wght.ttf) format("ttf");
 }
 
 @font-face {
   font-family: "EB Garamond Italic";
   font-style: italic;
-  src: url(../assets/fonts/EBGaramond-Italic-VariableFont_wght.ttf)
-    format("ttf");
+  src: url(assets/fonts/EBGaramond-Italic-VariableFont_wght.ttf) format("ttf");
 }
 
 :root {
