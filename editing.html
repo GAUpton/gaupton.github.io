@@ -13,12 +13,16 @@ layout: collection_index
   <tbody>
     {% for project in site.editing %}
     <tr>
+      {% if project.role %}
       <td>{{ project.role }}</td>
+      {% endif %} {% if project.publication %}
       <td>{{ project.publication }}</td>
+      {% endif %} {% if project.start_date %}
       <td>
         {{ project.start_date }}{% if project.end_date %}—{{ project.end_date
         }}{% endif %}
       </td>
+      {% endif %}
     </tr>
     {% endfor %}
   </tbody>

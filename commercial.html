@@ -14,10 +14,15 @@ layout: collection_index
   <tbody>
     {% for project in site.commercial %}
     <tr>
+      {% if project.title %}
       <td>{{ project.title }}</td>
+      {% endif %} {% if project.brand %}
       <td>{{ project.brand }}</td>
+      {% endif %} {% if project.year %}
       <td>{{ project.year }}</td>
+      {% endif %} {% if project.url %}
       <td><a title="{{ project.title }}" href="{{ project.url }}">Link</a></td>
+      {% endif %}
     </tr>
     {% endfor %}
   </tbody>
