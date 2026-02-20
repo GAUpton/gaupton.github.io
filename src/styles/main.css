@@ -1,22 +1,21 @@
 @font-face {
-  font-family: "EB Garamond";
+  font-family: 'EB Garamond';
   font-style: normal;
   font-display: swap;
   font-weight: 400 800;
   src:
-    local("EB Garamond"),
-    url("/assets/fonts/EBGaramond-VariableFont_wght.ttf") format("truetype");
+    local('EB Garamond'),
+    url('/fonts/EBGaramond-VariableFont_wght.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: "EB Garamond";
+  font-family: 'EB Garamond';
   font-style: italic;
   font-display: swap;
   font-weight: 400 800;
   src:
-    local("EB Garamond"),
-    url("/assets/fonts/EBGaramond-Italic-VariableFont_wght.ttf")
-      format("truetype");
+    local('EB Garamond'),
+    url('/fonts/EBGaramond-Italic-VariableFont_wght.ttf') format('truetype');
 }
 
 :root {
@@ -43,7 +42,7 @@ h3,
 p,
 a,
 table {
-  font-family: "EB Garamond", "Times New Roman", serif, system-ui;
+  font-family: 'EB Garamond', 'Times New Roman', serif, system-ui;
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
@@ -117,7 +116,7 @@ td {
 }
 
 td:not(:last-child):after {
-  content: ",";
+  content: ',';
 }
 
 article h1 {
