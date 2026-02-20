@@ -1,6 +1,6 @@
 ---
 role: Deputy Editor
 publication: Port
-start_date: 2017
-end_date: 2020
+startDate: 2017-01-01
+endDate: 2020-01-01
 ---

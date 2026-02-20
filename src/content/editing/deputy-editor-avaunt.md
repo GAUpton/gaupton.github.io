@@ -1,6 +1,6 @@
 ---
 role: Deputy Editor
 publication: Avaunt
-start_date: 2016
-end_date: 2017
+startDate: 2016-01-01
+endDate: 2017-01-01
 ---
