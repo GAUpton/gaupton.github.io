@@ -1,0 +1,43 @@
+---
+const { collection, role, title, publication, brand, date, link } = Astro.props;
+import { getCollection } from 'astro:content';
+const items = await getCollection(collection);
+const year = (date: Date) =>
+  new Intl.DateTimeFormat(undefined, { year: 'numeric' }).format(date);
+---
+
+<table>
+  <thead>
+    <tr>
+      {title && <th>Title</th>}
+      {role && <th>Role</th>}
+      {publication && <th>Publication</th>}
+      {brand && <th>Brand</th>}
+      {date && <th>Year</th>}
+      {link && <th>Link</th>}
+    </tr>
+  </thead>
+  <tbody>
+    {
+      items.map((item: any) => (
+        <tr>
+          {item.data.title && <td>{item.data.title}</td>}
+          {item.data.role && <td>{item.data.role}</td>}
+          {item.data.brand && <td>{item.data.brand}</td>}
+          {item.data.publication && <td>{item.data.publication}</td>}
+          {item.data.startDate && (
+            <td>
+              {year(item.data.startDate)}
+              {item.data.endDate && '—' + year(item.data.endDate)}
+            </td>
+          )}
+          {item.data.link && (
+            <td>
+              <a href="{item.data.link}"> title="{item.data.title}"Link</a>
+            </td>
+          )}
+        </tr>
+      ))
+    }
+  </tbody>
+</table>
