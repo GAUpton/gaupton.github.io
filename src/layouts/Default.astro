@@ -1,0 +1,19 @@
+---
+import Header from '../components/Header.astro';
+import Nav from '../components/Nav.astro';
+import Head from '../components/Head.astro';
+---
+
+<!doctype html>
+<html lang="en-gb">
+  <head>
+    <Head />
+  </head>
+  <body>
+    <Header />
+    <Nav />
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>
