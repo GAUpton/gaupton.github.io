@@ -1,7 +1,7 @@
 ---
 title: Salvatori
 brand: Salvatori
-year: 2022
+startDate: 2022-01-01
 ---
 
 I worked with Italian design brand [Salvatori](https://www.salvatoriofficial.com/en/gb/) to develop and deliver a new editorial strategy, communicating the company’s evolution from specialists in natural stone to a leading global design brand. In addition to publications and communications materials, I produced interviews and features exploring the brand and its values.
