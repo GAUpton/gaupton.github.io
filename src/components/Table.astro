@@ -19,7 +19,7 @@ const year = (date: Date) =>
   <tbody>
     {
       items.map((item: any) => (
-        <tr> {item.data.title && <td><a href=`/${collection}/${item.id}` title="{item.data.title}">{item.data.title}</a></td>}
+        <tr> {item.data.title && <td><a href=`/${collection}/${item.slug}` title="{item.data.title}">{item.data.title}</a></td>}
           {item.data.role && <td>{item.data.role}</td>}
           {item.data.brand && <td>{item.data.brand}</td>}
           {item.data.publication && <td>{item.data.publication}</td>}
