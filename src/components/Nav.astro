@@ -1,17 +1,24 @@
 ---
+import { navigationLinks } from '../config';
+const { pathname } = Astro.url;
 
+const aboutLink = navigationLinks[0];
+const workLinks = navigationLinks.slice(1);
 ---
-
 <nav>
-  <ul><li><a rel="prefetch" title="About" href="/">About</a></li></ul>
+  <ul>
+    <li>
+      <a rel="prefetch" title={aboutLink.title} href={aboutLink.href} aria-current={pathname === aboutLink.href ? 'page' : false}>{aboutLink.title}</a>
+    </li>
+  </ul>
   <h2>Work</h2>
   <ul>
-    <li><a rel="prefetch" title="Writing" href="/writing/">Writing</a></li>
-    <li><a rel="prefetch" title="Editing" href="/editing/">Editing</a></li>
-    <li>
-      <a rel="prefetch" title="Commercial Projects" href="/commercial/"
-        >Commercial Projects</a
-      >
-    </li>
+    {workLinks.map(link => (
+      <li>
+        <a rel="prefetch" title={link.title} href={link.href} aria-current={pathname.startsWith(link.href) ? 'page' : false}>
+          {link.title}
+        </a>
+      </li>
+    ))}
   </ul>
 </nav>
