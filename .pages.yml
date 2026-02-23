@@ -93,3 +93,8 @@ content:
         label: 'Content'
         type: rich-text
         required: true
+  - name: site-settings
+    label: 'Site settings'
+    type: file
+    path: 'src/config.ts'
+    format: json
