@@ -1,6 +1,6 @@
 content:
   - name: writing
-    label: 'Writing Projects'
+    label: 'Writing'
     type: collection
     path: 'src/content/writing'
     create: true
@@ -27,7 +27,7 @@ content:
         type: rich-text
         required: true
   - name: editing
-    label: 'Editing Roles'
+    label: 'Editing'
     type: collection
     path: 'src/content/editing'
     create: true
@@ -85,7 +85,7 @@ content:
         type: rich-text
         required: true
   - name: about
-    label: 'About me'
+    label: 'About'
     type: file
     path: 'src/content/pages/about.md'
     fields:
