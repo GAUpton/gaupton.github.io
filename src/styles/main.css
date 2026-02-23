@@ -1,3 +1,8 @@
+*:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
 @font-face {
   font-family: 'EB Garamond';
   font-style: normal;
@@ -26,12 +31,18 @@
 
   --dark-bg: black;
   --dark-color: white;
+
+  --space-xs: 0.25em;
+  --space-sm: 0.5em;
+  --space-md: 1em;
+  --space-lg: 1.5em;
 }
 
 body {
   background-color: light-dark(var(--light-bg), var(--dark-bg));
   color: light-dark(var(--light-color), var(--dark-color));
-  padding: 1em;
+  padding: var(--space-md);
+  text-align: center;
 }
 
 h1,
@@ -45,7 +56,6 @@ table {
   font-weight: 200;
   font-style: normal;
   font-size: 1.2rem;
-  white-space: no-wrap;
 }
 
 a {
@@ -80,16 +90,12 @@ body > nav {
 
   & li {
     display: inline-block;
-    padding: 0.5em;
+    padding: var(--space-sm);
   }
 
   & h2 {
     display: none;
   }
-}
-
-article {
-  text-align: justify;
 }
 
 table {
@@ -105,7 +111,7 @@ thead {
 
 tr {
   display: block;
-  margin-bottom: 1em;
+  margin-bottom: var(--space-md);
 }
 
 td {
@@ -121,16 +127,13 @@ td:not(:last-child):after {
   content: ',';
 }
 
-article h1 {
-  text-align: center;
-}
-
 @media only screen and (width >= 50em) {
   body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     max-width: 150ch;
     margin: 0 auto;
+    text-align: left;
   }
 
   body > header {
@@ -147,7 +150,7 @@ article h1 {
     & h2 {
       display: revert;
       padding: 0;
-      margin-bottom: 1em;
+      margin-bottom: var(--space-md);
     }
   }
 
@@ -156,7 +159,7 @@ article h1 {
   }
 
   table {
-    text-align: left;
+    text-align: inherit;
   }
 
   thead,
@@ -165,9 +168,14 @@ article h1 {
     display: revert;
   }
 
-  td,
+  td {
+    padding-block: var(--space-sm);
+    padding-inline: 0;
+  }
   th {
-    padding: 0.5em;
+    padding-block-start: 0;
+    padding-inline: 0;
+    padding-block-end: var(--space-sm);
   }
 
   td:not(:last-child):after {
@@ -179,8 +187,14 @@ article h1 {
     color: light-dark(var(--dark-color), var(--light-color));
     cursor: pointer;
   }
-
-  article {
-    text-align: revert;
-  }
 }
+
+/* Custom UL markers */
+ul:not(body > nav ul) {
+  padding-left: var(--space-md); /* Add left padding for the dash */
+}
+
+ul:not(body > nav ul) li::marker {
+  content: "- ";
+}
+
