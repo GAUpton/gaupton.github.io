@@ -1,9 +1,6 @@
-import { defineCollection } from 'astro:content';
-import { glob } from 'astro/loaders';
-import { z } from 'astro/zod';
+import { defineCollection, z } from 'astro:content';
 
 const writing = defineCollection({
-  loader: glob({ pattern: '*.md', base: './src/content/writing/' }),
   schema: z.object({
     title: z.string(),
     publication: z.string(),
@@ -12,7 +9,6 @@ const writing = defineCollection({
   }),
 });
 const editing = defineCollection({
-  loader: glob({ pattern: '*.md', base: './src/content/editing/' }),
   schema: z.object({
     role: z.string(),
     publication: z.string(),
@@ -22,7 +18,6 @@ const editing = defineCollection({
   }),
 });
 const commercial = defineCollection({
-  loader: glob({ pattern: '*.md', base: './src/content/commercial/' }),
   schema: z.object({
     title: z.string(),
     brand: z.string(),
@@ -31,4 +26,10 @@ const commercial = defineCollection({
   }),
 });
 
-export const collections = { writing, editing, commercial };
+const pages = defineCollection({
+  schema: z.object({
+    title: z.string(),
+  }),
+});
+
+export const collections = { writing, editing, commercial, pages };
