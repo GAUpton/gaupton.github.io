@@ -1,17 +1,12 @@
 ---
+import { getEntry } from 'astro:content';
 import Default from '../layouts/Default.astro';
----
+import CustomLink from '../components/CustomLink.astro';
+import { siteDescription } from '../config';
 
-<Default title="About">
-  <p>I am a writer and editor based in Paris.</p><p>
-    I am currently deputy editor at <a href="https://www.kinfolk.com"
-      ><cite>Kinfolk</cite></a
-    > and the editor of <a href="https://footnotemag.com/"
-      ><cite>Footnote</cite></a
-    >.
-  </p><p>
-    Follow me on Instagram <a href="https://www.instagram.com/gaupton"
-      >@gaupton</a
-    >.
-  </p>
+const about = await getEntry('pages', 'about');
+const { Content } = await about.render();
+---
+<Default title="About" description={siteDescription}>
+  <Content components={{ a: CustomLink }} />
 </Default>

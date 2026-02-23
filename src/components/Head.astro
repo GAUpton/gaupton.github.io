@@ -1,11 +1,16 @@
 ---
 import '../styles/main.css';
 import { ClientRouter } from 'astro:transitions';
-const { title } = Astro.props;
+import { name, siteDescription } from '../config';
+const { title, description = siteDescription } = Astro.props;
 ---
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content={description} />
+<link rel="canonical" href={Astro.url.href} />
+<link rel="preload" href="/fonts/EBGaramond-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="/fonts/EBGaramond-Italic-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="icon" sizes="any" href="/favicon.ico" />
 <title>{title}</title>
 <ClientRouter />
