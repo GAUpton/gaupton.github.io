@@ -188,13 +188,3 @@ td:not(:last-child):after {
     cursor: pointer;
   }
 }
-
-/* Custom UL markers */
-ul:not(body > nav ul) {
-  padding-left: var(--space-md); /* Add left padding for the dash */
-}
-
-ul:not(body > nav ul) li::marker {
-  content: "- ";
-}
-
