@@ -1,0 +1,141 @@
+backend:
+  name: git
+  branch: main
+site_url: 'https://georgealfredupton.com'
+display_url: 'https://georgealfredupton.com'
+content:
+  - name: writing
+    label: 'Writing Projects'
+    type: collection
+    path: 'src/content/writing'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - name: title
+        label: 'Title'
+        type: string
+        required: true
+      - name: publication
+        label: 'Publication'
+        type: string
+        required: true
+      - name: startDate
+        label: 'Start Date'
+        type: datetime
+        required: true
+      - name: url
+        label: 'URL'
+        type: string
+        required: false
+      - name: body
+        label: 'Content'
+        type: richtext
+        required: true
+  - name: editing
+    label: 'Editing Roles'
+    type: collection
+    path: 'src/content/editing'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - name: role
+        label: 'Role'
+        type: string
+        required: true
+      - name: publication
+        label: 'Publication'
+        type: string
+        required: true
+      - name: startDate
+        label: 'Start Date'
+        type: datetime
+        required: true
+      - name: endDate
+        label: 'End Date'
+        type: datetime
+        required: false
+      - name: url
+        label: 'URL'
+        type: string
+        required: false
+      - name: body
+        label: 'Content'
+        type: richtext
+        required: true
+  - name: commercial
+    label: 'Commercial Projects'
+    type: collection
+    path: 'src/content/commercial'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - name: title
+        label: 'Title'
+        type: string
+        required: true
+      - name: brand
+        label: 'Brand'
+        type: string
+        required: true
+      - name: startDate
+        label: 'Start Date'
+        type: datetime
+        required: true
+      - name: url
+        label: 'URL'
+        type: string
+        required: false
+      - name: body
+        label: 'Content'
+        type: richtext
+        required: true
+  - name: pages
+    label: 'Site Pages'
+    type: file
+    file: 'src/content/pages/about.md'
+    fields:
+      - name: title
+        label: 'Title'
+        type: string
+        required: true
+      - name: body
+        label: 'Content'
+        type: richtext
+        required: true
+  - name: config
+    label: 'Site Settings'
+    type: file
+    file: 'src/config.ts'
+    fields:
+      - name: domain
+        label: 'Domain'
+        type: string
+        required: true
+      - name: name
+        label: 'Site Name'
+        type: string
+        required: true
+      - name: siteDescription
+        label: 'Site Description'
+        type: string
+        required: true
+      - name: navigationLinks
+        label: 'Navigation Links'
+        type: list
+        fields:
+          - name: href
+            label: 'Link URL'
+            type: string
+            required: true
+          - name: title
+            label: 'Link Title'
+            type: string
+            required: true
+      - name: socialMedia
+        label: 'Social Media'
+        type: object
+        fields:
+          - name: instagram
+            label: 'Instagram URL'
+            type: string
+            required: false
