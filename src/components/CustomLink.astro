@@ -1,0 +1,9 @@
+---
+import { socialMedia } from '../config';
+const { href, children, ...props } = Astro.props;
+let finalHref = href;
+if (href === socialMedia.instagram) {
+  finalHref = socialMedia.instagram;
+}
+---
+<a href={finalHref} {...props}>{children}</a>
