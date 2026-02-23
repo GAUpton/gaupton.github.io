@@ -1,0 +1,43 @@
+---
+import Default from '../layouts/Default.astro';
+import Table from '../components/Table.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const collections = ['writing', 'editing', 'commercial']; // Define your collections here
+  const paths = collections.map((collection) => ({ params: { collection } }));
+  return paths;
+}
+
+const { collection } = Astro.params;
+
+let tableProps = {};
+let pageTitle = '';
+
+switch (collection) {
+  case 'writing':
+    tableProps = { collection: 'writing', title: true, publication: true, date: true, link: true };
+    pageTitle = 'Writing';
+    break;
+  case 'editing':
+    tableProps = { collection: 'editing', role: true, publication: true, date: true };
+    pageTitle = 'Editing';
+    break;
+  case 'commercial':
+    tableProps = { collection: 'commercial', title: true, brand: true, date: true, link: true };
+    pageTitle = 'Commercial Projects';
+    break;
+  default:
+    // Fallback or handle error if an unknown collection is requested
+    // For now, we'll just leave props empty, which will result in an empty table
+    pageTitle = 'Collection Not Found';
+    break;
+}
+---
+
+<Default title={pageTitle}>
+  <section>
+    {/* <h1>{pageTitle}</h1> removed as requested */}
+    <Table {...tableProps} />
+  </section>
+</Default>
