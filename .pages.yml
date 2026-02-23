@@ -1,8 +1,3 @@
-backend:
-  name: git
-  branch: main
-site_url: 'https://georgealfredupton.com'
-display_url: 'https://georgealfredupton.com'
 content:
   - name: writing
     label: 'Writing Projects'
