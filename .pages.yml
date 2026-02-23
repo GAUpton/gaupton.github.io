@@ -84,13 +84,3 @@ content:
         label: 'Content'
         type: richtext
         required: true
-  - name: home
-    label: "Home Page"
-    type: page
-    path: src/content/pages/about
-    create: false
-    fields:
-      - name: body
-        label: "Content"
-        type: richtext
-        required: false
