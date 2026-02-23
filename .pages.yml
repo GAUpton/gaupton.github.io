@@ -16,7 +16,7 @@ content:
         required: true
       - name: startDate
         label: 'Start Date'
-        type: datetime
+        type: date
         required: true
       - name: url
         label: 'URL'
@@ -24,7 +24,7 @@ content:
         required: false
       - name: body
         label: 'Content'
-        type: richtext
+        type: rich-text
         required: true
   - name: editing
     label: 'Editing Roles'
@@ -43,11 +43,11 @@ content:
         required: true
       - name: startDate
         label: 'Start Date'
-        type: datetime
+        type: date
         required: true
       - name: endDate
         label: 'End Date'
-        type: datetime
+        type: date
         required: false
       - name: url
         label: 'URL'
@@ -55,7 +55,7 @@ content:
         required: false
       - name: body
         label: 'Content'
-        type: richtext
+        type: rich-text
         required: true
   - name: commercial
     label: 'Commercial Projects'
@@ -74,7 +74,7 @@ content:
         required: true
       - name: startDate
         label: 'Start Date'
-        type: datetime
+        type: date
         required: true
       - name: url
         label: 'URL'
@@ -82,15 +82,14 @@ content:
         required: false
       - name: body
         label: 'Content'
-        type: richtext
+        type: rich-text
         required: true
-  - name: home
-    label: "Home Page"
-    type: page
-    path: src/content/pages/about
-    create: false
+  - name: about
+    label: 'About me'
+    type: file
+    path: 'src/content/pages/about.md'
     fields:
       - name: body
-        label: "Content"
-        type: richtext
-        required: false
+        label: 'Content'
+        type: rich-text
+        required: true
