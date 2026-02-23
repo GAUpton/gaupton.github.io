@@ -1,9 +1,0 @@
----
-layout: '../layouts/Page.astro'
----
-
-I am a writer and editor based in Paris.
-
-I am currently deputy editor at [<cite>Kinfolk</cite>](https://www.kinfolk.com/) and the editor of [<cite>Footnote</cite>](https://footnotemag.com/).
-
-Follow me on [Instagram](https://www.instagram.com/gaupton).
