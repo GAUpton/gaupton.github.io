@@ -2,12 +2,14 @@
 import Header from '../components/Header.astro';
 import Nav from '../components/Nav.astro';
 import Head from '../components/Head.astro';
+import { name } from '../config';
+const { title } = Astro.props ?? name;
 ---
 
 <!doctype html>
 <html lang="en-gb">
   <head>
-    <Head />
+    <Head title={title} />
   </head>
   <body>
     <Header />

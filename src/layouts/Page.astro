@@ -1,16 +1,16 @@
 ---
 import Default from './Default.astro';
-const { pageTitle, pageUrl } = Astro.props;
+const { title, url } = Astro.props;
 ---
 
-<Default>
+<Default title={title}>
   <article>
     <header>
       {
-        pageTitle && (
+        title && (
           <h1>
-            <a rel="bookmark" title="{ pageTitle }" href=`${ pageUrl }`>
-              {pageTitle}
+            <a rel="bookmark" title="{ title }" href=`${ url }`>
+              {title}
             </a>
           </h1>
         )
