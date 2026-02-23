@@ -98,3 +98,5 @@ content:
     type: file
     path: 'src/config.ts'
     format: json
+settings:
+  hide: true
